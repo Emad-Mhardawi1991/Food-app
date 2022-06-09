@@ -9,7 +9,24 @@ $color-grad-2: #f48982;
     box-sizing: border-box;
 }
 
-body {
+html {
+    font-size: 10px;
     min-height: 100vh;
-    background-image: linear-gradient(to right bottom, $color-primary,  $color-grad-1);
+}
+
+body {
+    min-height: 100%;
+    background-image: linear-gradient(to right bottom, $color-primary, $color-grad-1);
+}
+
+.container {
+    max-width: 120rem;
+    min-height: 110rem;
+    background-color: aliceblue;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+
+    @include breakpoints-up("xl"){
+        margin: 4vw auto;
+    }
 }
